@@ -77,6 +77,22 @@ test:
 #
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: neighbor_chat
+  pool: 5
+  username: neighbor
+  password: <%= ENV['NEIGHBORCHAT_DATABASE_PASSWORD'] %>
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: neighbor_chat_test
+  pool: 5
+  username: neighbor
+  password: <%= ENV['NEIGHBORCHAT_DATABASE_PASSWORD'] %>
 #
 production:
   <<: *default
